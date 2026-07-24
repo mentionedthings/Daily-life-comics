@@ -1,4 +1,4 @@
-# Humsurf — Smart Link Redirector
+# Daily Life Comics — Smart Link Redirector
 
 Humsurf generates shareable, social-media-friendly redirect links. When you share a Humsurf link on Facebook, Twitter, LinkedIn, WhatsApp, Discord, or Slack, the platform fetches rich Open Graph / Twitter Card meta tags and displays a beautiful preview with your custom image, title, and description. When a real person clicks the link, they are seamlessly redirected to the actual destination.
 
