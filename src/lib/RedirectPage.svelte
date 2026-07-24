@@ -92,7 +92,7 @@
 			<p>{customDescription}</p>
 		{/if}
 		{#if absoluteImageSrc}
-			<img src={absoluteImageSrc} alt={customTitle || 'Shared Content'} style="max-width: 100%; height: auto;" />
+			<img src={absoluteImageSrc} alt={customTitle || 'Shared Content'} data-pin-description={customDescription || ''} style="max-width: 100%; height: auto;" />
 		{/if}
 		<p>Continue to: <a href={redirectUrl}>{redirectUrl}</a></p>
 	{:else if isMobile}
@@ -105,7 +105,7 @@
 		<div class="redirect-container">
 			<h1>{customTitle || 'Shared Content'}</h1>
 			{#if absoluteImageSrc}
-				<img src={absoluteImageSrc} alt={customTitle || 'Shared Content'} class="preview-image" />
+				<img src={absoluteImageSrc} alt={customTitle || 'Shared Content'} data-pin-description={customDescription || ''} class="preview-image" />
 			{/if}
 			<p>You are being redirected to: <a href={redirectUrl}>{redirectUrl}</a></p>
 			<p>If you are not redirected automatically, <a href={redirectUrl}>click here</a>.</p>
