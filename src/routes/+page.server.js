@@ -80,7 +80,15 @@ export const actions = {
 		params.set('description', customDescription);
 
 		// Sign the parameters
-		const signature = await sign(params);
+		let signature;
+		try {
+			signature = await sign(params);
+		} catch (err) {
+			console.error('Failed to sign URL:', err.message);
+			return fail(500, {
+				generateError: 'Server configuration error: URL signing secret is not set. Please set the URL_SIGNING_SECRET environment variable.'
+			});
+		}
 		params.set('sig', signature);
 
 		// Build the final URL
